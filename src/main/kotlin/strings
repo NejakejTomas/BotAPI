@@ -1,0 +1,30 @@
+claimDailyBonus=claim daily bonus
+wasAlreadyClaimed=it was already claimed
+resourceNotFound=resource not found
+forbiddenOperation=forbidden operation
+operation=operation
+isNotAllowed=is not allowed
+because=because
+playerWithId=player with id
+guildWithId=guild with id
+wasNotFound=was not found
+translationForString=translation for string
+withTranslationCode=with translation code
+
+
+
+// New
+PlayerWithId%sWasNotFound=Player with id %s was not found
+ForbiddenOperation=Forbidden operation
+GuildWithId%sWasNotFound=Guild with id %s was not found
+ResourceNotFound=Resource was not found
+Operation%sIsNotAllowed=Operation %s is not allowed
+Operation%sIsNotAllowedBecause%s=Operation %s is not allowed because %s
+TranslationForString%sWithTranslationCode%sWasNotFound=Translation for string %s with translation code %s was not found
+ItemWithId%sDoesNotExist=Item with id %s does not exist
+ItemWithId%sWasNotFoundInInventoryOfPlayerWithId%s=Item with id %s was not found in inventory of player with id %s
+canNotClaimDailyBonus=can't claim daily bonus
+itWasAlreadyClaimed=it was already claimed
+modifyItem=modify item
+badInput=bad input
+BadArgument=Bad argument

@@ -1,0 +1,54 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-datetime:$kotlinDatetimeVersion"
+
+    // Exposed
+    implementation "org.jetbrains.exposed:exposed-core:$exposedVersion"
+    implementation "org.jetbrains.exposed:exposed-dao:$exposedVersion"
+    implementation "org.jetbrains.exposed:exposed-java-time:$exposedVersion"
+    implementation "org.jetbrains.exposed:exposed-jdbc:$exposedVersion"
+    implementation "com.h2database:h2:$h2databaseVersion"
+
+    // Ktor
+    implementation "io.ktor:ktor:$ktorVersion"
+    implementation "io.ktor:ktor-server-core:$ktorVersion"
+    implementation "io.ktor:ktor-server-netty:$ktorVersion"
+    implementation "io.ktor:ktor-auth:$ktorVersion"
+    implementation "io.ktor:ktor-gson:$ktorVersion"
+    implementation "io.ktor:ktor-utils:$ktorVersion"
+    implementation "io.ktor:ktor-utils-jvm:$ktorVersion"
+    implementation "io.ktor:ktor-http:$ktorVersion"
+    implementation "io.ktor:ktor-http-jvm:$ktorVersion"
+    implementation "ch.qos.logback:logback-classic:$logbackVersion"
+
+    // Koin
+    implementation "io.insert-koin:koin-core:$koinVersion"
+    implementation "io.insert-koin:koin-ktor:$koinVersion"
+
+    // Ktor
+    testImplementation "io.ktor:ktor-server-test-host:$ktorVersion"
+    testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlinTestVersion"
+
+    // Koin
+    testImplementation "io.insert-koin:koin-test-junit4:$koinVersion"
+}
+
+compileKotlin {
+    kotlinOptions {
+        freeCompilerArgs += '-Xopt-in=kotlin.RequiresOptIn'
+        freeCompilerArgs += '-Xuse-experimental=kotlin.ExperimentalUnsignedTypes'
+    }
+}
